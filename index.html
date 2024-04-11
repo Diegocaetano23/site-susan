@@ -24,10 +24,14 @@
       align-items: center; /* alinhar itens verticalmente */
       padding: 20px;
       box-sizing: border-box; /* incluir padding e bordas na largura total */
+
+      
     }
 
     .topnav h3 {
       margin: 0; /* remover margem padrão */
+      cursor: pointer; /* cursor de mão ao passar sobre */
+
     }
 
     .apresentacao {
@@ -397,19 +401,37 @@ margin-bottom: -80px;
     height: auto; /* Manter a proporção da imagem */
   }
 
-  
-    
   </style>
+
+
+  
+
 </head>
 <body>
   
   <div class="topnav">
-    <h3>Início</h3>
+    <!-- Transformando o h3 "Início" em um link para voltar ao topo -->
+    <h3 id="inicio">Início</h3>
     <div class="topnav-text">
       <h3>Terapia online</h3>
-    
     </div>
+
+    <script>
+      // Seleciona o elemento com o ID "inicio"
+      const inicio = document.getElementById('inicio');
+  
+      // Adiciona um evento de clique ao elemento "inicio"
+      inicio.addEventListener('click', () => {
+        // Faz a página rolar suavemente para o topo
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    </script>
+
   </div>
+
 
   <div class="apresentacao">
     <div class="texto-apresentacao">
