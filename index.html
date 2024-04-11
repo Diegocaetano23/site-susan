@@ -90,6 +90,19 @@
     }
 
     @media screen and (min-width: 768px) {
+
+
+      .foto-apresentacao img.vertical {
+    display: none; /* Esconder imagens verticais em telas maiores */
+  }
+
+
+     .foto-quemsoueu img.vertical {
+    display: none; /* Esconder imagens verticais em telas maiores */
+  }
+  
+
+
       .apresentacao {
         flex-direction: row; /* alterar o layout para linha em dispositivos maiores */
         justify-content: space-between; /* distribuir os itens horizontalmente */
@@ -102,6 +115,27 @@
         text-align: center; /* alinhar o nome centralizado */
         font-style: italic; 
       }
+
+
+      
+      .nome-info {
+        margin-top: 80px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 35px;
+        color:black; /* cor do texto */
+        text-align: center; /* alinhar o nome centralizado */
+        font-style: italic; 
+      }
+
+      .nome1-info{
+
+      font-size: 20px;
+      color:#D8C8AB;
+      text-align: center;
+      font-size: italic;
+      margin-top: -35px;
+      }
+      
       
       .nome1{
 
@@ -176,6 +210,24 @@
     }
 
     @media screen and (max-width: 767px) {
+
+      .foto-apresentacao img:not(.vertical) {
+    display: none;
+  }
+  
+  .foto-quemsoueu img:not(.vertical) {
+    display: none;
+  }
+
+  .foto-apresentacao img.vertical {
+    display: block;
+  }
+  
+  .foto-quemsoueu img.vertical {
+    display: block;
+  }
+
+
       .apresentacao {
         margin-top: 100px; /* Aumentar a margem superior para centralizar na tela menor */
         margin-bottom: 0; /* remover margem inferior */
@@ -307,6 +359,12 @@ margin-bottom: -80px;
       
     }
 
+    .whapp img {
+    width: 80px; /* Definir uma largura fixa para a imagem */
+    height: auto; /* Manter a proporção da imagem */
+  }
+
+  
     
   </style>
 </head>
@@ -334,8 +392,10 @@ margin-bottom: -80px;
     </div>
 
     <div class="foto-apresentacao">
-      <img src="./src/css/img/backsite1.png" alt="">
+      <img src="./src/css/img/backsite1.png" alt="" class="horizontal">
+      <img src="./src/css/img/backsite1vertical.png" alt="" class="vertical">
     </div>
+    
   </div>
 
   <div class="servicos">
@@ -371,7 +431,8 @@ margin-bottom: -80px;
 
   <div class="quem-sou-eu">
     <div class="foto-quemsoueu">
-      <img src="./src/css/img/backsite2.png" alt="">
+      <img src="./src/css/img/backsite2.png" alt="" class="horizontal">
+      <img src="./src/css/img/backsite2vertical.png" alt="" class="vertical">
     </div>
 
 
@@ -392,16 +453,23 @@ margin-bottom: -80px;
 
   </div>
 
-  <div class="informacoes" style="background-color: #d6ba85;margin-top: -19px;">
+  <div class="informacoes" style="background-color: #7e7137;margin-top: -4px;">
+    <br>
     <!-- Conteúdo das informações -->
-  <p style="text-align: center;">Psicóloga Susan Elise</p>
-  <br><br><br><br>
+    <div class="lotus">
+      <img src="./src/css/img/lotus.png" alt="">
+    </div>
+<p class="nome-info">Susan Elise</p>
+<p class="nome1-info">Psicóloga cognitivo comportamental</p>     
+  <br><br>
   
   </div>
   
+  <div class="whapp">
   <a href="https://wa.me/5512982560443" target="_blank" class="fixed-image-link">
-    <img src="./src/css/img/whatsapp1.png" alt="Descrição da imagem" style="width: 80px; height: auto;">
+    <img  src="./src/css/img/whatsapp1.png" alt="Descrição da imagem" style="width: 80px; height: auto;">
   </a>
+</div>
 
 </body>
 </html>
